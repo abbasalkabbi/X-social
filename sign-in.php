@@ -1,7 +1,7 @@
 <?php 
 session_start();
 if($_SESSION['id']){
-  header("location: home.html");
+ header("location: home.html");
 }
 ?>
 <!DOCTYPE html>
@@ -15,31 +15,17 @@ if($_SESSION['id']){
     <link rel="stylesheet" href="./css/core.css" />
     <link rel="stylesheet" href="./css/sign-up.css" />
     <!---css style link  END-->
-    <title>sign-up</title>
+    <title>sign-in</title>
 </head>
 <!---body -->
 
 <body>
-    <form action="" method="post" class="sign" id="sign-up">
+    <form action="" method="post" class="sign" id="sign-in">
         <!---logo---->
         <div class="logo">
             <h1>X</h1>
         </div>
         <!---logo- END--->
-        <!---Name input -->
-        <!---first name div -->
-        <div class="inputbox">
-            <input type="text" required="required" name="firstname" />
-            <span>FirstName</span>
-        </div>
-        <!---first name div END -->
-        <!---last name div -->
-        <div class="inputbox">
-            <input type="text" required="required" name="lastname" />
-            <span>LastName</span>
-        </div>
-        <!---last name div END -->
-        <!---Name input END -->
         <!--email and password input -->
         <!---Email name div -->
         <div class="inputbox">
@@ -55,11 +41,11 @@ if($_SESSION['id']){
         <!---password div END -->
         <!---email and password input END -->
         <!--submit-->
-        <button type="submit">sign-up</button>
+        <button type="submit">sign-in</button>
         <!--submit END-->
     </form>
 </body>
 <!---body END -->
-<script src="./js/sing-up.js"></script>
+<script src="./js/sign-in.js"></script>
 
 </html>
