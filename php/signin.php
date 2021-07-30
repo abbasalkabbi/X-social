@@ -19,7 +19,11 @@ if(mysqli_num_rows($sign_in_check) > 0 ){
 }
 $_SESSION['id']=$id; 
 if($_SESSION['id']){
-    echo 'sign-in';
+    echo 'successful';
 }
+}elseif(mysqli_num_rows(mysqli_query($conn,"SELECT * FROM users WHERE email= '{$email}' ")) > 0){
+    echo 'password';
+}else{
+    echo'error';
 }
 ?>

@@ -26,15 +26,18 @@ if($_SESSION['id']){
             <h1>X</h1>
         </div>
         <!---logo- END--->
+        <div class="error-sign">
+            <h1>password shoudd be bigger than 8 characters</h1>
+        </div>
         <!---Name input -->
         <!---first name div -->
-        <div class="inputbox">
+        <div class="inputbox " id=firstname>
             <input type="text" required="required" name="firstname" />
             <span>FirstName</span>
         </div>
         <!---first name div END -->
         <!---last name div -->
-        <div class="inputbox">
+        <div class="inputbox" id=lastname>
             <input type="text" required="required" name="lastname" />
             <span>LastName</span>
         </div>
@@ -42,13 +45,13 @@ if($_SESSION['id']){
         <!---Name input END -->
         <!--email and password input -->
         <!---Email name div -->
-        <div class="inputbox">
+        <div class="inputbox" id=email>
             <input type="text" required="required" name="email" />
             <span>Email</span>
         </div>
         <!---Email div END -->
         <!---password div -->
-        <div class="inputbox">
+        <div class="inputbox" id='password'>
             <input type="text" required="required" name="password" />
             <span>Password</span>
         </div>
@@ -57,6 +60,9 @@ if($_SESSION['id']){
         <!--submit-->
         <button type="submit">sign-up</button>
         <!--submit END-->
+        <!-----a link---->
+        <a href="sign-in.php">I have a account</a>
+        <!-----a link END---->
     </form>
 </body>
 <!---body END -->

@@ -11,18 +11,39 @@ body {
     .logo {
       width: 150px;
       height: 150px;
-      border: 1px #000 solid;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 0 0 20px 0;
+      background: linear-gradient(to right bottom, #0b63f6, #ff0076);
+      color: #fff;
+      box-shadow: 8px 6px 20px 0px #00000061;
       h1 {
         font-size: 88px;
         font-family: sans-serif;
+        text-shadow: 13px -1px 0px #31030366;
       }
     }
     //logo END
+    //error-sign
+    .error-sign {
+      display: none;
+      background: red;
+      width: 300px;
+      text-align: center;
+      height: 100px;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0 40px 0;
+      border-radius: 10px;
+      h1 {
+        font-size: 24px;
+        color: #fff;
+        font-family: sans-serif;
+      }
+    }
+    //error-sign END
     //.inputbox-input  div
     .inputbox {
       position: relative;
@@ -67,15 +88,61 @@ body {
       //input focus END
     }
     //.inputbox-input  div END
+    //input error active
+    .error-input {
+      //input focus
+      input {
+        border-color: red;
+      }
+      span {
+        color: red;
+        transform: translateX(-13px) translateY(-35px);
+        font-size: 1em;
+      }
+      input:focus,
+      input:valid {
+        border-color: red;
+      }
+      input:focus ~ span,
+      input:valid ~ span {
+        color: red;
+      }
+      //input focus END
+    }
+    //span error active END
     //submit
     button {
-      border: 1px solid #000;
+      border: none;
       background: linear-gradient(to right, #0b63f6, #003cc5);
       color: #fff;
       height: 50px;
       width: 300px;
       font-size: 24px;
     } //submit END
+    //submit hover
+    button:hover {
+      cursor: pointer;
+      background: linear-gradient(to right, #025dfa, #004cff);
+      color: #fff;
+      box-shadow: 7px 11px 20px #0000009e;
+    } //submit hover END
+    //a link
+    a {
+      margin: 20px 0 0 0;
+      background: #32c016;
+      text-decoration: none;
+      height: 40px;
+      width: 200px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    a:hover {
+      background: #36a420;
+      box-shadow: 7px 11px 20px #0000009e;
+    }
+    //a link END
   }
   //form sign END
 }

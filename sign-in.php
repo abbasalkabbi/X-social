@@ -28,21 +28,25 @@ if($_SESSION['id']){
         <!---logo- END--->
         <!--email and password input -->
         <!---Email name div -->
-        <div class="inputbox">
+        <div class="inputbox" id=email>
             <input type="text" required="required" name="email" />
             <span>Email</span>
         </div>
         <!---Email div END -->
         <!---password div -->
-        <div class="inputbox">
+        <div class="inputbox" id=password>
             <input type="text" required="required" name="password" />
             <span>Password</span>
         </div>
         <!---password div END -->
         <!---email and password input END -->
+
         <!--submit-->
         <button type="submit">sign-in</button>
         <!--submit END-->
+        <!-----a link---->
+        <a href="sign-up.php">Create New Account</a>
+        <!-----a link END---->
     </form>
 </body>
 <!---body END -->

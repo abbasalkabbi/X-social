@@ -20,7 +20,6 @@ body .sign {
 body .sign .logo {
   width: 150px;
   height: 150px;
-  border: 1px #000 solid;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -32,10 +31,38 @@ body .sign .logo {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 0 20px 0;
+  background: -webkit-gradient(linear, left top, right bottom, from(#0b63f6), to(#ff0076));
+  background: linear-gradient(to right bottom, #0b63f6, #ff0076);
+  color: #fff;
+  -webkit-box-shadow: 8px 6px 20px 0px #00000061;
+          box-shadow: 8px 6px 20px 0px #00000061;
 }
 
 body .sign .logo h1 {
   font-size: 88px;
+  font-family: sans-serif;
+  text-shadow: 13px -1px 0px #31030366;
+}
+
+body .sign .error-sign {
+  display: none;
+  background: red;
+  width: 300px;
+  text-align: center;
+  height: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px 0 40px 0;
+  border-radius: 10px;
+}
+
+body .sign .error-sign h1 {
+  font-size: 24px;
+  color: #fff;
   font-family: sans-serif;
 }
 
@@ -82,13 +109,67 @@ body .sign .inputbox input:valid ~ span {
   color: blue;
 }
 
+body .sign .error-input input {
+  border-color: red;
+}
+
+body .sign .error-input span {
+  color: red;
+  -webkit-transform: translateX(-13px) translateY(-35px);
+          transform: translateX(-13px) translateY(-35px);
+  font-size: 1em;
+}
+
+body .sign .error-input input:focus,
+body .sign .error-input input:valid {
+  border-color: red;
+}
+
+body .sign .error-input input:focus ~ span,
+body .sign .error-input input:valid ~ span {
+  color: red;
+}
+
 body .sign button {
-  border: 1px solid #000;
+  border: none;
   background: -webkit-gradient(linear, left top, right top, from(#0b63f6), to(#003cc5));
   background: linear-gradient(to right, #0b63f6, #003cc5);
   color: #fff;
   height: 50px;
   width: 300px;
   font-size: 24px;
+}
+
+body .sign button:hover {
+  cursor: pointer;
+  background: -webkit-gradient(linear, left top, right top, from(#025dfa), to(#004cff));
+  background: linear-gradient(to right, #025dfa, #004cff);
+  color: #fff;
+  -webkit-box-shadow: 7px 11px 20px #0000009e;
+          box-shadow: 7px 11px 20px #0000009e;
+}
+
+body .sign a {
+  margin: 20px 0 0 0;
+  background: #32c016;
+  text-decoration: none;
+  height: 40px;
+  width: 200px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .sign a:hover {
+  background: #36a420;
+  -webkit-box-shadow: 7px 11px 20px #0000009e;
+          box-shadow: 7px 11px 20px #0000009e;
 }
 /*# sourceMappingURL=sign-up.css.map */

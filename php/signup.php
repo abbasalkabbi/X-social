@@ -39,6 +39,9 @@ while($obj = mysqli_fetch_object($login)){
     
 }
 $_SESSION['id']=$id; 
+if($_SESSION['id']){
+    echo 'successful';
+}
                  }
                  //END _SESSION
                  }// END insert_form_sign_up
@@ -57,7 +60,15 @@ $_SESSION['id']=$id;
 }
 }else{
     // if input is empty 
-    echo "All input is Required";
+    if(empty($firstname)){
+        echo 'firstname';
+    }elseif(empty($lastname)){
+        echo 'lastname';
+    }elseif(empty($email)){
+        echo 'email';
+    }elseif(empty($password)){
+       echo 'password';
+    }
 }
 
 ?>
