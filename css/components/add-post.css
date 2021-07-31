@@ -1,0 +1,117 @@
+.add-post {
+  width: 100%;
+  min-height: 125px;
+}
+
+.add-post .add-post-header {
+  width: 100%;
+  height: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left top, right bottom, from(#000066), to(#6699ff));
+  background: linear-gradient(to right bottom, #000066, #6699ff);
+}
+
+.add-post .add-post-header h2 {
+  color: #fff;
+}
+
+.add-post .post-context {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  resize: both;
+  min-height: 60px;
+  line-height: 20px;
+}
+
+.add-post .post-context[contenteditable]:empty::before {
+  content: "write new post";
+  color: #000;
+  font-size: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.add-post .post-context:focus {
+  border: 1px #000 solid;
+  outline: none;
+  background: #dbdbdbdb;
+}
+
+.add-post .buttons {
+  width: 100%;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.add-post .buttons button {
+  border: none;
+  background: -webkit-gradient(linear, left top, right top, from(#0b63f6), to(#003cc5));
+  background: linear-gradient(to right, #0b63f6, #003cc5);
+  color: #fff;
+  font-size: 20px;
+  outline: none;
+  width: 50%;
+  height: 100%;
+}
+
+.add-post .buttons .input-image {
+  width: 50%;
+  height: 100%;
+}
+
+.add-post .buttons .input-image::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.add-post .buttons .input-image::before {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  content: "add image";
+  color: black;
+  display: inline-block;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), to(#e3e3e3));
+  background: linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 20px;
+}
+/*# sourceMappingURL=add-post.css.map */

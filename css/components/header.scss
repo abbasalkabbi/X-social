@@ -1,0 +1,44 @@
+//header
+.header {
+  width: 100%;
+  height: 50px;
+
+  //nav
+  nav {
+    border-bottom: 1px #000 solid;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //ul
+    ul {
+      //a
+      a {
+        border-left: 1px #000 solid;
+        border-right: 1px #000 solid;
+        padding: 10px 10px;
+        margin: 0px 5px 0 5px;
+        font-size: 24px;
+        color: #000;
+      }
+      a:hover {
+        background: #000;
+        color: #fff;
+        border-left: 1px #fff solid;
+        border-right: 1px #fff solid;
+      }
+      // if a active
+      .a-active {
+        background: #000;
+        color: #fff;
+      }
+      // a active END
+
+      //a END
+    }
+    //ul END
+  }
+  // nav END
+}
+//header END
