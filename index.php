@@ -2,7 +2,7 @@
 session_start();
 //check if your sign in
 if(!$_SESSION['id']){
-    header("location: sign-in.php");
+    header("location: sign-in");
 }
 ?>
 

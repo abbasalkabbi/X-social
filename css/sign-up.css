@@ -172,4 +172,46 @@ body .sign a:hover {
   -webkit-box-shadow: 7px 11px 20px #0000009e;
           box-shadow: 7px 11px 20px #0000009e;
 }
+
+@media screen and (min-width: 700px) {
+  body .sign .error-sign {
+    width: 700px;
+  }
+  body .sign .error-sign h1 {
+    font-size: 30px;
+  }
+  body .sign .inputbox {
+    position: relative;
+    width: 700px;
+    height: 60px;
+    margin-bottom: 25px;
+  }
+  body .sign .inputbox input {
+    height: 100%;
+  }
+  body .sign .inputbox span {
+    top: 20px;
+    font-size: 1.3em;
+  }
+  body .sign .inputbox input:focus ~ span,
+  body .sign .inputbox input:valid ~ span {
+    -webkit-transform: translateX(-20px) translateY(-45px);
+            transform: translateX(-20px) translateY(-45px);
+    font-size: 1.3em;
+  }
+  body .sign .error-input span {
+    -webkit-transform: translateX(-20px) translateY(-45px);
+            transform: translateX(-20px) translateY(-45px);
+    font-size: 1.3em;
+  }
+  body .sign button {
+    width: 700px;
+    font-size: 40px;
+  }
+  body .sign a {
+    height: 40px;
+    width: 500px;
+    font-size: 30px;
+  }
+}
 /*# sourceMappingURL=sign-up.css.map */
