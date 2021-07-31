@@ -1,7 +1,7 @@
 <?php
  
 //include filles
-include_once'inc/config.php';
+include_once 'inc/config.php';
 session_start();
 // get input data
 

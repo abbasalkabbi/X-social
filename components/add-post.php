@@ -6,11 +6,12 @@
     </div>
     <!--add-post-header--->
     <!---post-context-->
-    <span class="post-context" role="textbox" contenteditable></span>
+    <textarea class="post-context" role="textbox" contenteditable name="context"></textarea>
     <!---post-context END-->
+
     <!---button -->
     <div class="buttons">
-        <button>Publish</button>
+        <button id=submit>Publish</button>
         <input type="file" class="input-image" />
     </div>
     <!---button  END-->

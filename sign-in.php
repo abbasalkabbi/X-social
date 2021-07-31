@@ -1,7 +1,7 @@
 <?php 
 session_start();
 if($_SESSION['id']){
- header("location: home.html");
+ header("location: index.php");
 }
 ?>
 <!DOCTYPE html>

@@ -1,4 +1,11 @@
 <?php 
+//get header
+ include_once 'components/header.php'
+?>
+
+
+
+<?php 
 $error =$_SERVER['REDIRECT_STATUS'];
 $errpath=$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'] ;
 if($error == 404 ){
