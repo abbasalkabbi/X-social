@@ -89,3 +89,15 @@
   //bottons
 }
 //.add-post END
+//iped and pc
+
+@media screen and (min-width: 700px) {
+  //.add-post
+  .add-post {
+    width: 700px;
+
+    min-height: 125px;
+    margin: auto;
+  }
+}
+//iped and pc END

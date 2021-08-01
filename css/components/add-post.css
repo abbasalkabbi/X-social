@@ -99,4 +99,12 @@
   font-weight: 700;
   font-size: 20px;
 }
+
+@media screen and (min-width: 700px) {
+  .add-post {
+    width: 700px;
+    min-height: 125px;
+    margin: auto;
+  }
+}
 /*# sourceMappingURL=add-post.css.map */

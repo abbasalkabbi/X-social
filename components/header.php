@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="./css/components/header.css" />
     <!----add post css--->
     <link rel="stylesheet" href="./css/components/add-post.css" />
+    <!----posts css--->
+    <link rel="stylesheet" href="./css/home.css" />
     <title><?php echo $title?></title>
 </head>
 
@@ -18,7 +20,7 @@
     <div class="header">
         <nav>
             <ul>
-                <a href="./index.php" class="<?php if($title == 'Home'){echo'a-active';}?>">Home</a>
+                <a href="./index" class="<?php if($title == 'Home'){echo'a-active';}?>">Home</a>
                 <a href="">add friends</a>
                 <a href="">settings</a>
             </ul>
