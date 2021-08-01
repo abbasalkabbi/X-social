@@ -1,5 +1,5 @@
 <!---add new post form-->
-<form class="add-post">
+<form class="add-post" enctype=multipart/form-data>
     <!--add-post-header--->
     <div class="add-post-header">
         <h2>Add New Post</h2>
@@ -12,7 +12,7 @@
     <!---button -->
     <div class="buttons">
         <button id=submit>Publish</button>
-        <input type="file" class="input-image" />
+        <input type="file" class="input-image" name=image />
     </div>
     <!---button  END-->
 </form>

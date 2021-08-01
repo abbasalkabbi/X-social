@@ -29,6 +29,7 @@ function add_post() {
   // xhr load END
   //send data
   let formdata = new FormData(form_add_post);
+
   xhr.send(formdata);
 }
 button_submit_addpost.onclick = () => add_post();
