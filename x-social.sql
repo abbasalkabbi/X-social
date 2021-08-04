@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.5
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jul 31, 2021 at 05:02 PM
+-- Generation Time: Aug 04, 2021 at 11:24 PM
 -- Server version: 5.7.24
--- PHP Version: 7.4.1
+-- PHP Version: 7.4.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -31,16 +30,19 @@ SET time_zone = "+00:00";
 CREATE TABLE `posts` (
   `id_post` int(11) NOT NULL,
   `id_author` int(11) NOT NULL,
-  `context` text NOT NULL,
-  `date_post` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `context` text,
+  `date_post` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `url_img` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `posts`
 --
 
-INSERT INTO `posts` (`id_post`, `id_author`, `context`, `date_post`) VALUES
-(1, 1, 'has date ', '2021-07-31 19:54:31');
+INSERT INTO `posts` (`id_post`, `id_author`, `context`, `date_post`, `url_img`) VALUES
+(1, 2, 'its so simple', '2021-08-04 23:05:15', NULL),
+(2, 2, 'its here image', '2021-08-04 23:06:27', '21628107587.jpg'),
+(3, 2, NULL, '2021-08-04 23:10:00', '21628107800.jpg');
 
 -- --------------------------------------------------------
 
@@ -90,7 +92,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id_post` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_post` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`

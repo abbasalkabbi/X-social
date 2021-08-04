@@ -29,7 +29,7 @@
         font-size: 12px;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-end;
       }
       //date post END
     }
@@ -49,6 +49,16 @@
         justify-content: center;
       }
       //p END
+      //image-post
+      .image-post{
+        width: 300px;
+        margin: 10px 0px ;
+        //img
+        img{
+          width: 100%;
+        }//img END
+      }
+      //image-post END
       // a link to read more
       a {
         border: none;
@@ -100,3 +110,41 @@
   //post END
 }
 //.container-post END
+// pc style and iped
+@media screen and (min-width: 700px) {
+  //container-post
+  .container-post {
+    
+    //post
+    .post {
+      width: 500px;
+      //post-header
+      .post-header {
+        width: 100%;
+        height: 20px;
+       
+      }
+      //post-header END
+      //content content-post
+      .content-post {
+      
+       
+       
+        //image-post
+        .image-post{
+          width: 500px;
+          //img
+          img{
+            width: 100%;
+          }//img END
+        }
+        //image-post END
+      
+      }
+      //content END
+     
+    }
+    //post END
+  }
+  //.container-post END
+}

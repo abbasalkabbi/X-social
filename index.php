@@ -53,8 +53,27 @@ while($author = mysqli_fetch_object($get_author)){
         <!------post-header END------->
         <!-----post-content--->
         <section class=content-post>
+            <!---context ---->
+            <?php 
+            if($post['context'] != null){?>
             <p> <?php echo htmlspecialchars($post['context'])?>
             </p>
+            <?php 
+            }
+            ?>
+             <!---context  END ---->
+            <!---image post ----->
+            <?php 
+            // cheak if post have image will show div image 
+            if($post['url_img'] != null){ 
+            ?>
+            <div class="image-post">
+            <img src="php/image-post/<?php echo $post['url_img']?>" alt="">
+            </div>
+            <?php 
+            }
+            ?>
+             <!---image post ----->
             <a href="" class="readmore">Read More</a>
         </section>
         <!-----post-content END--->
