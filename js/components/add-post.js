@@ -1,6 +1,11 @@
 const form_add_post = document.querySelector(".add-post"),
   button_submit_addpost = form_add_post.querySelector("#submit"),
-  textarea = form_add_post.querySelector(".post-context");
+  textarea = form_add_post.querySelector(".post-context"),
+  add_post_action=document.querySelector(".add-post-action"),
+  action=add_post_action.querySelector(".action"),
+  text_action=action.querySelector("p"),
+  button_action=action.querySelector('button');
+
 // textarea auto size
 function resizeTextarea(ev) {
   this.style.height = "24px";
@@ -23,6 +28,33 @@ function add_post() {
       if (xhr.status == 200) {
         let data = xhr.response;
         console.log(data);
+        if(data == ' input empty'){
+          //if input empty 
+          add_post_action.style.display="flex";
+          text_action.innerText=`Post Not Upload(${data})`;
+          button_action.innerText='cancel';
+          button_action.classList.add('error-input-button')
+          button_action.onclick=()=>{
+            add_post_action.style.display="none";
+          }
+        }else if(data == '  Something is Wrong'){
+          add_post_action.style.display="flex";
+          text_action.innerText=data;
+          button_action.innerText='cancel';
+          button_action.classList.add('error-input-button')
+          button_action.onclick=()=>{
+            add_post_action.style.display="none";
+          }
+        }else{
+          add_post_action.style.display="flex";
+          text_action.innerText='post upload';
+          button_action.innerText='Done';
+          button_action.classList.remove('error-input-button')
+          button_action.classList.add('upload-button')
+          button_action.onclick=()=>{
+            location.reload();
+          }
+        }
       } //if 200 END
     } // if done END
   };

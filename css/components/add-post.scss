@@ -89,6 +89,53 @@
   //bottons
 }
 //.add-post END
+// .add_post_action
+.add-post-action{
+  width: 100%;
+  height: 100vh;
+  border: 1px #000 solid;
+  position: fixed;
+  top: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  .action{
+    background-color: #fff;
+    width: 200px;
+    height: 100px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    p{
+      font-size: 14px;
+      margin: 10px;
+    }
+    button{
+      border: none;
+      width: 60px;
+      height: 30px;
+      color: #fff;
+    }
+    .error-input-button{
+      background-color: red;
+
+     
+    }
+    .error-input-button:hover{
+      cursor: pointer;
+      box-shadow: 4px 6px 20px 0px #ff000075;
+    }
+    .upload-button{
+      background-color: green;
+    }
+    .upload-button:hover{
+      cursor: pointer;
+      box-shadow: 4px 6px 20px 0px green;
+    }
+  }
+}
 //iped and pc
 
 @media screen and (min-width: 700px) {
@@ -98,6 +145,28 @@
 
     min-height: 125px;
     margin: auto;
+  }//@extend
+  // .add_post_action
+.add-post-action{
+  
+  .action{
+ 
+    width: 400px;
+    height: 200px;
+    
+    p{
+      font-size: 24px;
+      margin: 20px;
+    }
+    button{
+      
+      width: 120px;
+      height: 40px;
+     
+      font-size: 24px;
+    }
+   
   }
+}// .add_post_action end
 }
 //iped and pc END

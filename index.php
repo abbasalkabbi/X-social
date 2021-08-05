@@ -18,10 +18,20 @@ $title="Home";
 <?php 
 include_once 'components/add-post.php'
 ?>
+<!-----add-post-action----->
+<div class="add-post-action">
+    <!------action----->
+    <div class="action">
+    <p></p>
+    <button></button>
+    </div>
+    <!------action-END---->
+</div>
+<!-----add-post-action-END---->
 <div class="container-post">
     <?php 
     //get post from databacse
-    $posts= mysqli_query($conn,'SELECT * FROM posts');
+    $posts= mysqli_query($conn,'SELECT * FROM posts ORDER BY id_post DESC');
     $posts_data= mysqli_fetch_all($posts,MYSQLI_ASSOC);
 
     if(!empty($posts_data)){
@@ -34,7 +44,7 @@ include_once 'components/add-post.php'
     <div class="post">
         <!-----post-header--->
         <div class="post-header">
-            <h3 class=author-name><?php //get author name
+            <a  href='user/<?php echo $post['id_author'] ?>' class=author-name><?php //get author name
           
   $get_author= mysqli_query($conn,"SELECT * FROM users WHERE id ={$post['id_author']}");
       // check if come data from db
@@ -45,7 +55,7 @@ while($author = mysqli_fetch_object($get_author)){
 }
 }
 
-?> </h3>
+?> </a>
             <span class=date-post>
                 <?php echo htmlspecialchars($post['date_post'])?>
             </span>
@@ -56,7 +66,7 @@ while($author = mysqli_fetch_object($get_author)){
             <!---context ---->
             <?php 
             if($post['context'] != null){?>
-            <p> <?php echo htmlspecialchars($post['context'])?>
+            <p> <?php echo  substr(htmlspecialchars($post['context']),0,30). '...'?>
             </p>
             <?php 
             }
@@ -74,7 +84,7 @@ while($author = mysqli_fetch_object($get_author)){
             }
             ?>
              <!---image post ----->
-            <a href="" class="readmore">Read More</a>
+            <a href="post/<?php echo $post['id_post']?>" class="readmore">Read More</a>
         </section>
         <!-----post-content END--->
         <div class="footer-post">

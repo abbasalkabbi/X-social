@@ -30,7 +30,7 @@ if(in_array($img_ext,$img_ext_allowed) === true){
   if(!empty($context)){
     $add_post=mysqli_query($conn,"INSERT INTO posts (id_author,context) VALUES ($id,'$context')");
   }else{
-    echo 'input empty';
+    echo'input empty';
   }
 }
 
