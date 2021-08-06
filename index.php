@@ -28,6 +28,7 @@ include_once 'components/add-post.php'
     <!------action-END---->
 </div>
 <!-----add-post-action-END---->
+<!------"container-post---->
 <div class="container-post">
     <?php 
     //get post from databacse
@@ -44,18 +45,28 @@ include_once 'components/add-post.php'
     <div class="post">
         <!-----post-header--->
         <div class="post-header">
-            <a  href='user/<?php echo $post['id_author'] ?>' class=author-name><?php //get author name
+        <?php //get author info
           
-  $get_author= mysqli_query($conn,"SELECT * FROM users WHERE id ={$post['id_author']}");
-      // check if come data from db
-       if(mysqli_num_rows($get_author) > 0){
-        // get all data author
-while($author = mysqli_fetch_object($get_author)){
-   echo $author -> firstName.' '.$author -> lastName; //echo name author
-}
-}
-
-?> </a>
+          $get_author= mysqli_query($conn,"SELECT * FROM users WHERE id ={$post['id_author']}");
+              // check if come data from db
+               if(mysqli_num_rows($get_author) > 0){
+                // get all data author
+        while($author = mysqli_fetch_object($get_author)){
+           $name_author= $author -> firstName.' '.$author -> lastName; //echo name author
+           $img_author=$author ->url_img;
+        }
+        }
+        
+        ?>
+            <a  href='user/<?php echo $post['id_author'] ?>' class=author-name> 
+            <img src="php/image-user/<?php 
+            if($img_author != NULL){
+                echo $img_author;
+            }else{
+                echo 'default.png';
+            }
+            ?>" alt="">
+            <?php echo $name_author?> </a>
             <span class=date-post>
                 <?php echo htmlspecialchars($post['date_post'])?>
             </span>

@@ -17,6 +17,7 @@
 }
 
 .container-post .post .post-header .author-name {
+  margin: 0px 0px 5px 0px;
   width: 50%;
   float: left;
   display: -webkit-box;
@@ -29,6 +30,10 @@
       -ms-flex-pack: center;
           justify-content: center;
   color: #000;
+}
+
+.container-post .post .post-header .author-name img {
+  width: 50px;
 }
 
 .container-post .post .post-header .date-post {

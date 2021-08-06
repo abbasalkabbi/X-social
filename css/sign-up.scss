@@ -26,6 +26,18 @@ body {
       }
     }
     //logo END
+    //title-form
+.title-form{
+  width: 300px;
+  height: 40px;
+  margin: 0 0 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dbdbdb;
+  font-size: 34px;
+}
+//title-form END
     //error-sign
     .error-sign {
       display: none;
@@ -110,6 +122,36 @@ body {
       //input focus END
     }
     //span error active END
+    //input-image
+    .input-image {
+      width: 300px;
+      height: 100%;
+      margin: 10px 0px;
+    }
+    .input-image::-webkit-file-upload-button {
+      visibility: hidden;
+    }
+    .input-image::before {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+
+      content: "add image";
+      color: black;
+      display: inline-block;
+      background: linear-gradient(top, #f9f9f9, #e3e3e3);
+      border: 1px solid #999;
+      border-radius: 3px;
+      padding: 5px 8px;
+      outline: none;
+      white-space: nowrap;
+      user-select: none;
+      cursor: pointer;
+      text-shadow: 1px 1px #fff;
+      font-weight: 700;
+      font-size: 20px;
+    }
+    //input-image END
     //submit
     button {
       border: none;
@@ -151,6 +193,13 @@ body {
   body {
     //form sign
     .sign {
+       //title-form
+.title-form{
+  width: 700px;
+  height: 40px;
+ 
+}
+//title-form END
       //error-sign
       .error-sign {
         width: 700px;
@@ -198,6 +247,13 @@ body {
         //input focus END
       }
       //span error active END
+      //input-image
+    .input-image {
+      width: 700px;
+      height: 100%;
+    }
+   
+    //input-image END
       //submit
       button {
         width: 700px;

@@ -44,6 +44,23 @@ body .sign .logo h1 {
   text-shadow: 13px -1px 0px #31030366;
 }
 
+body .sign .title-form {
+  width: 300px;
+  height: 40px;
+  margin: 0 0 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #dbdbdb;
+  font-size: 34px;
+}
+
 body .sign .error-sign {
   display: none;
   background: red;
@@ -130,6 +147,40 @@ body .sign .error-input input:valid ~ span {
   color: red;
 }
 
+body .sign .input-image {
+  width: 300px;
+  height: 100%;
+  margin: 10px 0px;
+}
+
+body .sign .input-image::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+body .sign .input-image::before {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  content: "add image";
+  color: black;
+  display: inline-block;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), to(#e3e3e3));
+  background: linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 20px;
+}
+
 body .sign button {
   border: none;
   background: -webkit-gradient(linear, left top, right top, from(#0b63f6), to(#003cc5));
@@ -174,6 +225,10 @@ body .sign a:hover {
 }
 
 @media screen and (min-width: 700px) {
+  body .sign .title-form {
+    width: 700px;
+    height: 40px;
+  }
   body .sign .error-sign {
     width: 700px;
   }
@@ -203,6 +258,10 @@ body .sign a:hover {
     -webkit-transform: translateX(-20px) translateY(-45px);
             transform: translateX(-20px) translateY(-45px);
     font-size: 1.3em;
+  }
+  body .sign .input-image {
+    width: 700px;
+    height: 100%;
   }
   body .sign button {
     width: 700px;
