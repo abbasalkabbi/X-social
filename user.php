@@ -152,7 +152,7 @@ while($author = mysqli_fetch_object($get_author)){
             }
             ?>
              <!---image post ----->
-            <a href="post/<?php echo $post['id_post']?>" class="readmore">Read More</a>
+            <a href="../post/<?php echo $post['id_post']?>" class="readmore">Read More</a>
         </section>
         <!-----post-content END--->
         <div class="footer-post">

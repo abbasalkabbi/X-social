@@ -25,9 +25,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  color: #000;
+}
+
+.container-post .post .post-header .author-name img {
+  width: 50px;
 }
 
 .container-post .post .post-header .date-post {
@@ -138,10 +140,196 @@
   background: #003cc5;
 }
 
+.container-post .add-comment {
+  width: 100%;
+  min-height: 125px;
+}
+
+.container-post .add-comment .add-comment-header {
+  width: 100%;
+  height: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left top, right bottom, from(#000066), to(#6699ff));
+  background: linear-gradient(to right bottom, #000066, #6699ff);
+}
+
+.container-post .add-comment .add-comment-header h2 {
+  color: #fff;
+}
+
+.container-post .add-comment .add-comment-context {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  resize: both;
+  min-height: 60px;
+  line-height: 20px;
+}
+
+.container-post .add-comment .add-comment-context:focus {
+  border: 1px #000 solid;
+  outline: none;
+  background: #dbdbdbdb;
+}
+
+.container-post .add-comment .buttons {
+  width: 100%;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container-post .add-comment .buttons button {
+  border: none;
+  background: -webkit-gradient(linear, left top, right top, from(#0b63f6), to(#003cc5));
+  background: linear-gradient(to right, #0b63f6, #003cc5);
+  color: #fff;
+  font-size: 20px;
+  outline: none;
+  width: 50%;
+  height: 100%;
+}
+
+.container-post .add-comment .buttons .input-image {
+  width: 50%;
+  height: 100%;
+}
+
+.container-post .add-comment .buttons .input-image::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.container-post .add-comment .buttons .input-image::before {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  content: "add image";
+  color: black;
+  display: inline-block;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), to(#e3e3e3));
+  background: linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.comments-container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.comments-container .comment {
+  width: 100%;
+  min-height: 100px;
+  background-color: #dbdbdbdb;
+  margin: 5px 0;
+}
+
+.comments-container .comment .head {
+  width: 100%;
+  height: 50px;
+}
+
+.comments-container .comment .head .info-author {
+  float: left;
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.comments-container .comment .head .info-author img {
+  width: 50px;
+}
+
+.comments-container .comment .head .info-author a {
+  color: #000000;
+}
+
+.comments-container .comment .head .date-comment {
+  width: 50%;
+  height: 100%;
+  float: left;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.comments-container .comment .content {
+  margin: 10px 0 0 0;
+  width: 100%;
+}
+
+.comments-container .comment .content p {
+  margin: 0 0 15px 0;
+  width: 100%;
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+.comments-container .comment .content .image-comment {
+  width: 300px;
+  margin: auto;
+}
+
+.comments-container .comment .content .image-comment img {
+  width: 100%;
+}
+
 @media screen and (min-width: 700px) {
   .container-post {
     width: 90%;
     margin: auto;
+  }
+  .container-post .comments-container {
+    width: 100%;
+    min-height: 100vh;
+  }
+  .container-post .comments-container .comment .content .image-comment {
+    width: 700px;
+  }
+  .container-post .comments-container .comment .content .image-comment img {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=post.css.map */
