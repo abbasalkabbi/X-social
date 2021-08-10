@@ -40,5 +40,36 @@
     //ul END
   }
   // nav END
+  .log-out{
+    top: 5px;
+    right: 1px;
+    position: fixed;
+    border:none;
+    width: 50px;
+    height: 20px;
+    background: red;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: -1px 2px 20px #000;
+  }
+  .log-out:hover{
+    box-shadow: -1px 2px 20px red;
+  }
 }
 //header END
+@media screen and (min-width: 700px) {
+  .header {
+  .log-out{
+    top: 5px;
+    right: 10px;
+    position: fixed;
+    border:none;
+    width: 100px;
+    height: 40px;
+    background: red;
+    color: #fff;
+    cursor: pointer;
+   
+  }
+}
+}

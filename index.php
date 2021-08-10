@@ -35,11 +35,12 @@ if(!$_SESSION['id']){
     <div class="header">
         <nav>
             <ul>
-                <a href="./index" class="a-active">Home</a>
+                <a href="./" class="a-active">Home</a>
                
                 <a href="user/<?php echo $_SESSION['id']?>">Profile</a>
             </ul>
         </nav>
+        <button class=log-out>log out</button>
     </div>
     <!---END Header -->
 <!---add new post form-->
@@ -146,7 +147,7 @@ if(!$_SESSION['id']){
            
             $is_liked=mysqli_query($conn,"SELECT * FROM like_post WHERE id_user = {$_SESSION['id']} AND id_post={$post['id_post']}");
             if(mysqli_num_rows($is_liked) > 0){
-                        $unlike=mysqli_query($conn,"DELETE FROM like_post WHERE id_user = {$id_user} AND id_post={$id_post}");
+                     
                          echo "like-active";
                          $like="liked";
                          }else{$like="like";}?>"  ><?echo$like?></button>
@@ -165,5 +166,6 @@ if(!$_SESSION['id']){
 </body>
 <script src="./js/components/add-post.js"></script>
 <script src="js/like-post.js"></script>
+<script src="js/log-out.js"></script>
 </html>
 <!---END Footer -->

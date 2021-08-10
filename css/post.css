@@ -130,10 +130,17 @@
           justify-content: center;
   background: #dbdbdbdb;
   font-size: 24px;
+  border: none;
 }
 
 .container-post .post .footer-post .like {
   border-right: 1px solid #000;
+}
+
+.container-post .post .footer-post .like:hover {
+  background: #05205e;
+  color: #fff;
+  cursor: pointer;
 }
 
 .container-post .post .footer-post .like-active {

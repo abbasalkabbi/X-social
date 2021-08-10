@@ -26,7 +26,12 @@ function add_comment() {
       if (xhr.status == 200) {
         let data = xhr.response;
         console.log(data);
-        
+        console.log(data);
+        if(data == 'Upload'){
+          location.reload();
+        }else{
+alert(data)
+        }
         
       } //if 200 END
     } // if done END

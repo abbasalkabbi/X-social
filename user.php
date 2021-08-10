@@ -2,6 +2,11 @@
 //include filles
 include_once 'php/inc/config.php';
 session_start();
+//check if your sign in
+if(!$_SESSION['id']){
+    header("location: sign-in");
+}
+
 $id_user= $_GET['id'];
 //get data from db
 $sq_user=mysqli_query($conn,"SELECT * FROM users WHERE id={$id_user}");
@@ -32,12 +37,25 @@ if(mysqli_num_rows($sq_user) > 0 ){
                 <!----style user------>
                  <link rel="stylesheet" href="../css/user.css">
                  <link rel="stylesheet" href="../css/home.css">
+                <!----header css--->
+                <link rel="stylesheet" href="../css/components/header.css" />
                  <link rel="stylesheet" href="../css/sign-up.css">
     <!----style END------>
 
     <title>User/<?php echo $firstname ." ". $lastname?></title>
 </head>
 <body>
+<div class="header">
+        <nav>
+            <ul>
+                <a href="../" class="">Home</a>
+               
+                <a href="user/<?php echo $_SESSION['id']?>" class="<?php if($_SESSION['id'] == $id_user){echo "a-active";}?>">Profile</a>
+            </ul>
+        </nav>
+       
+    </div>
+    <!---END Header -->
 <!------user-container--->
     <div class="user-container">
     <!-------image----->
@@ -112,18 +130,28 @@ if(mysqli_num_rows($sq_user) > 0 ){
     <div class="post">
         <!-----post-header--->
         <div class="post-header">
-            <a  href='user/<?php echo $post['id_author'] ?>' class=author-name><?php //get author name
+        <?php //get author info
           
-  $get_author= mysqli_query($conn,"SELECT * FROM users  WHERE id ={$post['id_author']}");
-      // check if come data from db
-       if(mysqli_num_rows($get_author) > 0){
-        // get all data author
-while($author = mysqli_fetch_object($get_author)){
-   echo $author -> firstName.' '.$author -> lastName; //echo name author
-}
-}
-
-?> </a>
+          $get_author= mysqli_query($conn,"SELECT * FROM users WHERE id ={$post['id_author']}");
+              // check if come data from db
+               if(mysqli_num_rows($get_author) > 0){
+                // get all data author
+        while($author = mysqli_fetch_object($get_author)){
+           $name_author= $author -> firstName.' '.$author -> lastName; //echo name author
+           $img_author=$author ->url_img;
+        }
+        }
+        
+        ?>
+            <a  href='../user/<?php echo $post['id_author'] ?>' class=author-name> 
+            <img src="../php/image-user/<?php 
+            if($img_author != NULL){
+                echo $img_author;
+            }else{
+                echo 'default.png';
+            }
+            ?>" alt="">
+            <?php echo $name_author?> </a>
             <span class=date-post>
                 <?php echo htmlspecialchars($post['date_post'])?>
             </span>
@@ -176,5 +204,6 @@ while($author = mysqli_fetch_object($get_author)){
     </div>
     <!------user-container END--->
 <script src="../js/update-user.js"></script>
+
 </body>
 </html>

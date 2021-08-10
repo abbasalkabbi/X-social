@@ -98,10 +98,17 @@
           justify-content: center;
           background: #dbdbdbdb;
           font-size: 24px;
+          border: none;
         }
         .like {
           border-right: 1px solid #000;
         }
+         //like  and comments END
+      .like:hover{
+        background: #05205e;
+        color: #fff;
+        cursor: pointer;
+      }
         //like  and comments END
   
         .like-active {

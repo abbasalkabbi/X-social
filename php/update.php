@@ -21,7 +21,7 @@ if(mysqli_num_rows($sq_user) > 0 ){
  
      $firstname_old= $user -> firstName; //hendle firstName
      $lastname_old= $user -> lastName; //hendle lastName
-     
+     $url_img_old= $user->url_img;
      
  }
 
@@ -30,6 +30,7 @@ if(mysqli_num_rows($sq_user) > 0 ){
 if(in_array($img_ext,$img_ext_allowed) === true){
     $img_name_new=$id.time().'.'.$img_ext;
     if(move_uploaded_file($tmp_name,"../php/image-user/".$img_name_new)){
+        unlink("../php/image-user/".$url_img_old);//delete old image
  // move image to our floder 
  // input 
  if($firstname != $firstname_old && $lastname != $lastname_old){

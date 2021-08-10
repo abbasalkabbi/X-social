@@ -24,10 +24,12 @@ if(in_array($img_ext,$img_ext_allowed) === true){
      if(!empty($context)){
        // if have context
        $add_comments=mysqli_query($conn,"INSERT INTO comments (id_author,id_post,context,url_img) VALUES ($id,$id_post,'$context','$img_name_new')");
+       echo "Upload";
      }else{
        //if dont have context
       
        $add_comments=mysqli_query($conn,"INSERT INTO comments (id_author,id_post,url_img) VALUES ($id,$id_post,'$img_name_new')");
+       echo "Upload";
      }
       }else{
         echo "Something is Wrong";
@@ -36,6 +38,7 @@ if(in_array($img_ext,$img_ext_allowed) === true){
   // if not image here
   if(!empty($context)){
     $add_comments=mysqli_query($conn,"INSERT INTO comments (id_author,id_post,context) VALUES ($id,$id_post,'$context')");
+    echo "Upload";
   }else{
     echo'input empty';
   }

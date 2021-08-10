@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 09, 2021 at 03:37 AM
+-- Generation Time: Aug 10, 2021 at 06:32 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.16
 
@@ -41,9 +41,8 @@ CREATE TABLE `comments` (
 --
 
 INSERT INTO `comments` (`id`, `id_author`, `id_post`, `context`, `url_img`, `date`) VALUES
-(1, 2, 7, 'hi ', NULL, '2021-08-08 07:39:29'),
-(2, 2, 7, NULL, '21628398189.jpg', '2021-08-08 07:49:49'),
-(3, 2, 7, 'this wonderfull ', '21628398543.jpg', '2021-08-08 07:55:43');
+(1, 1, 1, 'this is comment', NULL, '2021-08-10 06:30:40'),
+(2, 1, 1, NULL, '11628566251.jpg', '2021-08-10 06:30:51');
 
 -- --------------------------------------------------------
 
@@ -63,7 +62,7 @@ CREATE TABLE `like_post` (
 --
 
 INSERT INTO `like_post` (`id`, `id_user`, `id_post`, `date`) VALUES
-(20, 2, 7, '2021-08-09 00:18:06');
+(2, 1, 2, '2021-08-10 03:31:10');
 
 -- --------------------------------------------------------
 
@@ -84,13 +83,8 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`id_post`, `id_author`, `context`, `date_post`, `url_img`) VALUES
-(1, 2, 'its so simple', '2021-08-04 23:05:15', NULL),
-(2, 2, 'its here image', '2021-08-04 23:06:27', '21628107587.jpg'),
-(3, 2, NULL, '2021-08-04 23:10:00', '21628107800.jpg'),
-(5, 2, 'hi', '2021-08-05 03:27:54', NULL),
-(6, 1, 'hi my post as ali beatch', '2021-08-06 01:07:20', '11628201240.jpg'),
-(7, 1, 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', '2021-08-06 01:49:46', NULL),
-(8, 2, 'hi', '2021-08-09 01:08:48', NULL);
+(1, 1, 'Welcome to my website This website is like facebook .this website is open source ', '2021-08-10 06:29:24', NULL),
+(2, 1, NULL, '2021-08-10 06:31:04', '11628566264.jpg');
 
 -- --------------------------------------------------------
 
@@ -112,9 +106,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `password`, `url_img`) VALUES
-(1, 'ali', 'ahmed', 'ali@ali.com', 'aliali', NULL),
-(2, 'abbas', 'alkabbi', 'abbas@abbas.com', 'abbas', '21628288980.jpg'),
-(3, 'hussin', 'alk', 'hussin@hussin.com', 'hussin', NULL);
+(1, 'test', 'one', 'test@test.com', 'test@test.com', '11628566305.jpg');
 
 --
 -- Indexes for dumped tables
@@ -157,25 +149,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `like_post`
 --
 ALTER TABLE `like_post`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id_post` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_post` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables

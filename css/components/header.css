@@ -38,4 +38,37 @@
   background: #000;
   color: #fff;
 }
+
+.header .log-out {
+  top: 5px;
+  right: 1px;
+  position: fixed;
+  border: none;
+  width: 50px;
+  height: 20px;
+  background: red;
+  color: #fff;
+  cursor: pointer;
+  -webkit-box-shadow: -1px 2px 20px #000;
+          box-shadow: -1px 2px 20px #000;
+}
+
+.header .log-out:hover {
+  -webkit-box-shadow: -1px 2px 20px red;
+          box-shadow: -1px 2px 20px red;
+}
+
+@media screen and (min-width: 700px) {
+  .header .log-out {
+    top: 5px;
+    right: 10px;
+    position: fixed;
+    border: none;
+    width: 100px;
+    height: 40px;
+    background: red;
+    color: #fff;
+    cursor: pointer;
+  }
+}
 /*# sourceMappingURL=header.css.map */

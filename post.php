@@ -2,6 +2,12 @@
 
 <?php 
 include_once "php/inc/config.php";
+session_start();
+//check if your sign in
+if(!$_SESSION['id']){
+    header("location: sign-in");
+}
+
 
 $id_post=$_GET["id"];
 $get_post=mysqli_query($conn,"SELECT * FROM posts WHERE id_post='{$id_post}' "); // get post 
@@ -99,10 +105,18 @@ else{
             
         </section>
         <!-----post-content END--->
-        <div class="footer-post">
-            <span class=like>like</span>
-            <span class=comments>comments</span>
-        </div>
+        <form class="footer-post">
+        <button class="like <?php 
+           
+           $is_liked_post=mysqli_query($conn,"SELECT * FROM like_post WHERE id_user = {$_SESSION['id']} AND id_post={$id_post}");
+           if(mysqli_num_rows($is_liked_post) > 0){
+                      
+                        echo "like-active";
+                        $like="liked";
+                        }else{$like="like";}?>"  ><?echo$like?></button>
+           <input type="hidden" name="id-post" value="<?php echo  $id_post?>">
+           <button class=comments>comments</button>
+        </form>
     </div>
     <!---post-->
     <!---add-comments--->
@@ -208,5 +222,6 @@ else{
 </div>
 <!----container-post---->
 <script src="../js/add-comments.js"></script>
+<script src="../js/add-like-post.js"></script>
 </body>
 </html>

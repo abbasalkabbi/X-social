@@ -111,6 +111,7 @@ body .sign .inputbox span {
   -webkit-transition: 0.6s;
   transition: 0.6s;
   font-family: sans-serif;
+  z-index: -1;
 }
 
 body .sign .inputbox input:focus,
