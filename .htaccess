@@ -4,3 +4,5 @@ ErrorDocument 404 /x-social/404.php
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
+RewriteRule ^post/([0-9]+) post.php?id=$1
+RewriteRule ^user/([0-9]+) user.php?id=$1
